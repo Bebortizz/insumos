@@ -1,0 +1,100 @@
+  
+  <div class="row" style="outline-width: 4px; padding">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center" style="border-color: white;">
+        <div class="card-body">
+          <h1 style="color:rgb(255, 30, 30);" class="mx-auto">Ventas eliminadas</h1>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="row">
+        <div class="col-md-11.1 mx-start " style="margin-top: 20px;">
+                <div class="card text-center">
+                    <div class="card-body">
+                        
+                            <h3 class="card-title text-uppercase">
+                               
+                            </h3>
+                        </a>
+                       
+ {{#each ventasMap}}
+<table class="table table-bordered table-light" style="margin-top: 20px;">
+    
+  <thead class="thead-light">
+    
+    <tr>
+        
+      <th scope="col">ID</th>
+      <th scope="col">Nombre de producto</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Orden de compra</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Fecha de orden de compra</th>
+      <th scope="col">Folio de factura</th>
+      <th scope="col">Factura</th>
+      <th scope="col">Fecha de factura</th>
+      <th scope="col">Costo</th>
+      <th scope="col">Costo total</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Precio total</th>
+      <th scope="col">Precio neto</th>
+      <th scope="col">Dias transcurridos</th>
+      <th scope="col">Status</th>
+      <th scope="col">Complemento</th>
+      <th scope="col">Ganancia unitaria</th>
+      <th scope="col">Ganancia total</th>
+      <th scope="col">Ganancia por persona</th>
+    </tr>
+    
+  </thead>
+  
+ <tbody>
+    
+    <tr>
+      <td>{{id}}</td>
+      <td >{{producto}}</td>
+      <td>{{cliente}}</td>
+      <td>{{orden_c}}</td>
+      <td>{{cantidad}}</td>
+      <td>{{fechaorden}}</td>
+      <td>{{folio_f}}</td>
+      <td>{{factura}}</td>
+      <td>{{fecha}}</td>
+      <td>{{costo}}</td>
+      <td>{{costo_t}}</td>
+      <td>{{precio}}</td>
+      <td>{{precio_t}}</td>
+      <td>{{precio_n}}</td>
+      <td>{{dias_t}}</td>
+      <td>{{status}}</td>
+      <td>{{complemento}}</td>
+      <td>{{ganancia_uni}}</td>
+      <td>{{ganancia_t}}</td>
+      <td>{{ganancia_pp}}</td>
+
+    </tr>
+    
+  </tbody>
+   
+</table>
+
+
+ <form action="/ventas/active/{{id}}" method="POST">
+ <button class="btn btn-success">Activar</button>
+ <a href="/ventas/deleteperma/{{id}}" class="btn btn-danger" style="margin-right: 15px;">Eliminar</a>
+                            
+                         </form>
+  
+ {{/each}}
+
+                    </div>
+                </div>
+           </div>
+     
+    </div>
+</div>

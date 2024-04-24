@@ -1,0 +1,98 @@
+  
+  <div class="row" style="outline-width: 4px; padding">
+    <div class="col-md-6 mx-auto">
+      <div class="card text-center" style="border-color: white;">
+        <div class="card-body">
+          <h1 style="color:rgb(255, 30, 30);" class="mx-auto">¿Estás seguro de borrar permanentemente la venta {{ventasMap.orden_c}}?</h1>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="row">
+        <div class="col-md-11.1 mx-start " style="margin-top: 20px;">
+                <div class="card text-center">
+                    <div class="card-body">
+                        
+                            <h3 class="card-title text-uppercase">
+                               
+                            </h3>
+                        </a>
+                       
+ 
+<table class="table table-bordered table-light" style="margin-top: 20px;">
+    
+  <thead class="thead-light">
+    
+    <tr>
+        
+      <th scope="col">ID</th>
+      <th scope="col">Nombre de producto</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Orden de compra</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Fecha de orden de compra</th>
+      <th scope="col">Folio de factura</th>
+      <th scope="col">Factura</th>
+      <th scope="col">Fecha de factura</th>
+      <th scope="col">Costo</th>
+      <th scope="col">Costo total</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Precio total</th>
+      <th scope="col">Precio neto</th>
+      <th scope="col">Dias transcurridos</th>
+      <th scope="col">Status</th>
+      <th scope="col">Complemento</th>
+      <th scope="col">Ganancia unitaria</th>
+      <th scope="col">Ganancia total</th>
+      <th scope="col">Ganancia por persona</th>
+    </tr>
+    
+  </thead>
+  
+ <tbody>
+    
+    <tr>
+      <td>{{ventasMap.id}}</td>
+      <td >{{ventasMap.producto}}</td>
+      <td>{{ventasMap.cliente}}</td>
+      <td>{{ventasMap.orden_c}}</td>
+      <td>{{ventasMap.cantidad}}</td>
+      <td>{{ventasMap.fechaorden}}</td>
+      <td>{{ventasMap.folio_f}}</td>
+      <td>{{ventasMap.factura}}</td>
+      <td>{{ventasMap.fecha}}</td>
+      <td>{{ventasMap.costo}}</td>
+      <td>{{ventasMap.costo_t}}</td>
+      <td>{{ventasMap.precio}}</td>
+      <td>{{ventasMap.precio_t}}</td>
+      <td>{{ventasMap.precio_n}}</td>
+      <td>{{ventasMap.dias_t}}</td>
+      <td>{{ventasMap.status}}</td>
+      <td>{{ventasMap.complemento}}</td>
+      <td>{{ventasMap.ganancia_uni}}</td>
+      <td>{{ventasMap.ganancia_t}}</td>
+      <td>{{ventasMap.ganancia_pp}}</td>
+
+    </tr>
+    
+  </tbody>
+   
+</table>
+
+
+ <form action="/ventas/deleteperma/{{ventasMap.id}}" method="POST">
+                            <button class="btn btn-danger">Eliminar</button>
+                         </form>
+  
+ 
+
+                    </div>
+                </div>
+           </div>
+     
+    </div>
+</div>

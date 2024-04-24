@@ -1,0 +1,72 @@
+<div class="row" style="outline-width: 4px; padding">
+    <div class="col-md-4 mx-auto">
+      <div class="card text-center" style="border-color: white;">
+        <div class="card-body">
+          <h1 style="color:dodgerblue;" class="mx-auto">Editando la orden: {{ventasMap.orden_c}} </h1>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container p-4">
+    
+    <div class="row">
+        <div class="col-md-5     mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/ventas/edit/{{ventasMap.id}}" method="POST">
+              
+                        <div class="form-group">
+                        <b>Producto</b>  <input type="text" value="{{ventasMap.producto}}" class="form-control" name="producto" placeholder="Nombre del producto" >
+                        </div>
+                        <div class="form-group">
+                        <b>Cliente</b>    <input type="text" value="{{ventasMap.cliente}}" class="form-control" name="cliente" placeholder="Nombre del cliente">
+                        </div>
+                        <div class="form-group">
+                        <b>Orden de compra</b>    <input type="number" value="{{ventasMap.orden_c}}" name="orden_c" class="form-control" placeholder="Orden de compra">
+                        </div>
+                         <div class="form-group">
+                         <b>Cantidad</b>   <input type="number"  value="{{ventasMap.cantidad}}" name="cantidad" class="form-control" placeholder="Cantidad">
+                        </div>
+                       
+                         <div class="form-group">
+                          <b>Fecha de orden de compra</b> <h6>{{ventasMap.fechaorden}} fecha anterior, favor de volver a seleccionar la fecha</h6> <input type="date" class="form-control" name="date_orden_c">
+                        </div>
+                        <div class="form-group">
+                          <b>Folio de factura</b>  <input type="text" class="form-control" value="{{ventasMap.folio_f}}" name="folio_f" placeholder="Folio de factura">
+                        </div>
+                        <div class="form-group">
+                          <b>Factura</b>  <input type="text" class="form-control" value="{{ventasMap.factura}}" name="factura" placeholder="Factura">
+                        </div>
+                           <div class="form-group">
+                           <b>Fecha de factura</b> <h6>{{ventasMap.fecha}} fecha anterior, favor de volver a seleccionar la fecha</h6><input type="date" class="form-control" name="date_fac">
+                        </div>
+                        
+                        <div class="form-group">
+                         <b>Costo </b>  <input type="number"value="{{ventasMap.costo}}" name="costo" class="form-control" placeholder="Costo $">
+                        </div>
+                        
+                        <div class="form-group">
+                          <b>Precio</b>  <input type="number" value="{{ventasMap.precio}}" name="precio" class="form-control" placeholder="Precio $">
+                        </div>
+                
+                        <div class="form-group">
+                           <b>Dias transcurridos</b> <input type="number" value="{{ventasMap.dias_t}}" name="dias_t" class="form-control" placeholder="Dias transcurridos">
+                        </div>
+                        <div class="form-group">
+                          <b>Estatus de pago</b>  <input type="text" value="{{ventasMap.status}}" name="status" class="form-control" placeholder="Status de pago">
+                        </div>
+                        <div class="form-group">
+                          <b>Complemento</b>  <input type="text" value="{{ventasMap.complemento}}" name="complemento" class="form-control" placeholder="Complemento pago">
+                        </div>
+        
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
